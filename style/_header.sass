@@ -27,12 +27,20 @@
             outline: none
             background: transparent
             cursor: pointer
+            margin-right: 15px
+            transition: .2s
         & input
             font-size: 14px
-            padding: 10px
+            padding: 5px
+            position: relative
+            top: -12px
             width: 500px
             border: none
             border-bottom: 1px solid black
             outline: none
+            transition: .2s
             &:focus
-                border-bottom: 4px solid rgb(225,191,146)
+                border-bottom: 3px solid rgb(225,191,146)
+                top: 0
+.active-btn
+    transform: scale(1.2)

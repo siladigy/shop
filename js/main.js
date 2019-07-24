@@ -6,11 +6,21 @@ let enter = document.querySelector('#enter'),
     email = document.querySelector('#email'),
     password = document.querySelector('#password'),
     error = document.querySelectorAll('.error'),
-    submit = document.querySelector('#submit');
+    submit = document.querySelector('#submit'),
+    search = document.querySelector('#search'),
+    searchLine = document.querySelector('.search-line');
 
 
 enter.addEventListener('click', function(){
     login.classList.remove('login-hide');
+});
+
+searchLine.addEventListener('focus', () => {
+  search.classList.toggle('active-btn');
+});
+
+searchLine.addEventListener('focusout', () => {
+  search.classList.toggle('active-btn');
 });
 
 loginBg.addEventListener('click', function(e){

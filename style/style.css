@@ -50,19 +50,32 @@
   outline: none;
   background: transparent;
   cursor: pointer;
+  margin-right: 15px;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .header-search input {
   font-size: 14px;
-  padding: 10px;
+  padding: 5px;
+  position: relative;
+  top: -12px;
   width: 500px;
   border: none;
   border-bottom: 1px solid black;
   outline: none;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .header-search input:focus {
-  border-bottom: 4px solid #e1bf92;
+  border-bottom: 3px solid #e1bf92;
+  top: 0;
+}
+
+.active-btn {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .login-hide {
@@ -219,7 +232,7 @@
 .goods .block {
   width: 200px;
   height: 250px;
-  margin-left: 20px;
+  margin-left: 30px;
   margin-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
