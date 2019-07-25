@@ -1,14 +1,14 @@
 .main
     display: flex
     margin-top: 30px
+    justify-content: space-between
 .links
     width: 250px
     display: flex
     flex-direction: column
-    padding-top: 7px
     & a 
         text-align: right
-        font-size: 20px
+        font-size: 17px
         color: #000
         text-decoration: none
         &:hover
@@ -18,7 +18,15 @@
     flex-wrap: wrap
     width: 1200px
     justify-content: center
+    position: relative
+    &-switcher
+        position: absolute
+        right: 40px
+        top: -30px
+        cursor: pointer
     & .block
+        position: relative
+        top: -7px
         width: 200px
         height: 250px
         margin-left: 30px
@@ -26,6 +34,13 @@
         display: flex
         justify-content: center
         flex-direction: column
+        &-small
+            top: 2px
+            width: 100px
+            height: 125px
+            margin-left: 10px
+            margin-bottom: 10px
+            overflow: hidden
         & .img
             width: 200px
             height: 200px
@@ -33,6 +48,9 @@
             cursor: pointer
             overflow: hidden
             margin-bottom: 10px
+            &-small
+                width: 100px
+                height: 100px
             & button
                 position: absolute  
                 background: rgb(225,191,146)
@@ -46,13 +64,16 @@
                 padding: 10px 
                 opacity: 0 
                 transition: .7s
-            & img
-                width: 220px
-                height: 220px
+            & .pic
+                width: 200px
+                height: 200px
                 object-fit: cover
-                transition: .7s
                 position: absolute
+                &-small
+                    width: 100px
+                    height: 100px
             &:hover button
                 opacity: 1
 .price
     margin: 0 auto
+

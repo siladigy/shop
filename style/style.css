@@ -12,7 +12,7 @@
 }
 
 .header-logo {
-  font-size: 50px;
+  font-size: 70px;
   width: 250px;
   font-family: 'Playfair Display';
   font-weight: 700;
@@ -56,8 +56,8 @@
 }
 
 .header-search input {
-  font-size: 14px;
-  padding: 5px;
+  font-size: 12px;
+  padding: 6px;
   position: relative;
   top: -12px;
   width: 500px;
@@ -69,8 +69,8 @@
 }
 
 .header-search input:focus {
-  border-bottom: 3px solid #e1bf92;
-  top: 0;
+  border-bottom: 2px solid #e1bf92;
+  top: 1px;
 }
 
 .active-btn {
@@ -192,6 +192,9 @@
   display: -ms-flexbox;
   display: flex;
   margin-top: 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .links {
@@ -203,12 +206,11 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 7px;
 }
 
 .links a {
   text-align: right;
-  font-size: 20px;
+  font-size: 17px;
   color: #000;
   text-decoration: none;
 }
@@ -227,9 +229,19 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+}
+
+.goods-switcher {
+  position: absolute;
+  right: 40px;
+  top: -30px;
+  cursor: pointer;
 }
 
 .goods .block {
+  position: relative;
+  top: -7px;
   width: 200px;
   height: 250px;
   margin-left: 30px;
@@ -246,6 +258,15 @@
           flex-direction: column;
 }
 
+.goods .block-small {
+  top: 2px;
+  width: 100px;
+  height: 125px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
 .goods .block .img {
   width: 200px;
   height: 200px;
@@ -253,6 +274,11 @@
   cursor: pointer;
   overflow: hidden;
   margin-bottom: 10px;
+}
+
+.goods .block .img-small {
+  width: 100px;
+  height: 100px;
 }
 
 .goods .block .img button {
@@ -271,14 +297,17 @@
   transition: .7s;
 }
 
-.goods .block .img img {
-  width: 220px;
-  height: 220px;
+.goods .block .img .pic {
+  width: 200px;
+  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transition: .7s;
-  transition: .7s;
   position: absolute;
+}
+
+.goods .block .img .pic-small {
+  width: 100px;
+  height: 100px;
 }
 
 .goods .block .img:hover button {

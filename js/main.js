@@ -8,7 +8,11 @@ let enter = document.querySelector('#enter'),
     error = document.querySelectorAll('.error'),
     submit = document.querySelector('#submit'),
     search = document.querySelector('#search'),
-    searchLine = document.querySelector('.search-line');
+    searchLine = document.querySelector('.search-line'),
+    switcher = document.querySelector('.goods-switcher'),
+    block = document.querySelectorAll('.block'),
+    img = document.querySelectorAll('.img'),
+    pic = document.querySelectorAll('.pic');
 
 
 enter.addEventListener('click', function(){
@@ -17,10 +21,13 @@ enter.addEventListener('click', function(){
 
 searchLine.addEventListener('focus', () => {
   search.classList.toggle('active-btn');
+  searchLine.style.color = 'rgba(0, 0, 0, 1)';
 });
 
 searchLine.addEventListener('focusout', () => {
   search.classList.toggle('active-btn');
+  searchLine.style.color = 'rgba(0, 0, 0, 0)';
+
 });
 
 loginBg.addEventListener('click', function(e){
@@ -62,4 +69,19 @@ submit.addEventListener('click', function(){
     error[1].innerHTML = "";
     password.style.borderBottom = '1px solid grey';
   }
+});
+
+switcher.addEventListener('click', () => {
+
+  block.forEach((elem) => {
+    elem.classList.toggle('block-small');
+  });
+
+  img.forEach((elem) => {
+    elem.classList.toggle('img-small');
+  });
+
+  pic.forEach((elem) => {
+    elem.classList.toggle('pic-small');
+  });
 });
