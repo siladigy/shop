@@ -12,7 +12,9 @@ let enter = document.querySelector('#enter'),
     switcher = document.querySelector('.goods-switcher'),
     block = document.querySelectorAll('.block'),
     img = document.querySelectorAll('.img'),
-    pic = document.querySelectorAll('.pic');
+    pic = document.querySelectorAll('.pic'),
+    menuWrap = document.querySelector('.main-menu'),
+    menuList = document.querySelectorAll('.menu');
 
 
 enter.addEventListener('click', function(){
@@ -27,7 +29,6 @@ searchLine.addEventListener('focus', () => {
 searchLine.addEventListener('focusout', () => {
   search.classList.toggle('active-btn');
   searchLine.style.color = 'rgba(0, 0, 0, 0)';
-
 });
 
 loginBg.addEventListener('click', function(e){
@@ -84,4 +85,11 @@ switcher.addEventListener('click', () => {
   pic.forEach((elem) => {
     elem.classList.toggle('pic-small');
   });
+});
+
+menuWrap.addEventListener('click', function (event) {
+
+let target = event.target;
+  target.classList.toggle('menu-open');
+
 });

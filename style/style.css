@@ -115,23 +115,20 @@
           flex-direction: column;
   position: relative;
   overflow: hidden;
-}
-
-.login-form img {
-  width: 100px;
-  margin: 0 auto;
-  margin-bottom: 25px;
+  width: 500px;
+  height: 500px;
 }
 
 .login-form input {
   font-size: 16px;
-  width: 350px;
+  width: 100%;
   font-family: sans-serif;
   padding: 10px;
   margin-bottom: 10px;
   border: none;
   border-bottom: 1px solid grey;
   outline: none;
+  text-transform: lowercase;
 }
 
 .login-form input:focus {
@@ -146,7 +143,8 @@
   cursor: pointer;
   font-family: sans-serif;
   width: 100%;
-  border: 1px solid black;
+  border: 1px solid #e1bf92;
+  background: transparent;
   -webkit-transition: .4s;
   transition: .4s;
   margin-top: 15px;
@@ -167,7 +165,7 @@
 }
 
 .login-form a {
-  font-size: 12px;
+  font-size: 10px;
   text-decoration: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -179,8 +177,9 @@
 }
 
 .login-form a.register {
-  font-size: 14px;
+  font-size: 12px;
   margin-top: -10px;
+  margin-bottom: 50px;
 }
 
 .login-form a:hover {
@@ -192,9 +191,6 @@
   display: -ms-flexbox;
   display: flex;
   margin-top: 30px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .links {
@@ -202,21 +198,30 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
-.links a {
-  text-align: right;
-  font-size: 17px;
-  color: #000;
+.links .menu {
+  font-size: 20px;
+  cursor: pointer;
+  list-style: none;
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 5px;
+  max-height: 25px;
+  -webkit-transition: .5s all ease-out;
+  transition: .5s all ease-out;
+}
+
+.links .menu li a {
+  font-size: 14px;
   text-decoration: none;
 }
 
-.links a:hover {
-  color: gray;
+.links .menu-open {
+  max-height: 300px;
 }
 
 .goods {
@@ -225,7 +230,7 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 1200px;
+  width: 2000px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

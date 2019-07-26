@@ -1,22 +1,28 @@
 .main
     display: flex
     margin-top: 30px
-    justify-content: space-between
 .links
     width: 250px
     display: flex
-    flex-direction: column
-    & a 
-        text-align: right
-        font-size: 17px
-        color: #000
-        text-decoration: none
-        &:hover
-            color: gray
+    justify-content: flex-end
+    & .menu
+        font-size: 20px
+        cursor: pointer
+        list-style: none
+        text-align: center
+        overflow: hidden
+        margin-bottom: 5px
+        max-height: 25px
+        transition: .5s all ease-out
+        & li a 
+            font-size: 14px
+            text-decoration: none
+        &-open    
+            max-height: 300px
 .goods
     display: flex
     flex-wrap: wrap
-    width: 1200px
+    width: 2000px
     justify-content: center
     position: relative
     &-switcher

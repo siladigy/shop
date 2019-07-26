@@ -19,19 +19,18 @@
         flex-direction: column
         position: relative
         overflow: hidden
-        & img 
-            width: 100px
-            margin: 0 auto
-            margin-bottom: 25px
+        width: 500px
+        height: 500px
         & input
             font-size: 16px
-            width: 350px
+            width: 100%
             font-family: sans-serif
             padding: 10px 
             margin-bottom: 10px 
             border: none
             border-bottom: 1px solid grey
             outline: none
+            text-transform: lowercase
             &:focus
                 border-bottom: 1px solid rgb(225,191,146)
         & button
@@ -42,7 +41,8 @@
             cursor: pointer
             font-family: sans-serif
             width: 100%
-            border: 1px solid black
+            border: 1px solid rgb(225,191,146)
+            background: transparent
             transition: .4s
             margin-top: 15px
             &:hover
@@ -54,13 +54,14 @@
             display: flex
             font-size: 10px
         & a 
-            font-size: 12px
+            font-size: 10px
             text-decoration: none
             display: flex
             justify-content: flex-end
             color: grey
             &.register
-                font-size: 14px
+                font-size: 12px
                 margin-top: -10px
+                margin-bottom: 50px
             &:hover
                 text-decoration: underline
