@@ -89,7 +89,12 @@ switcher.addEventListener('click', () => {
 
 menuWrap.addEventListener('click', function (event) {
 
-let target = event.target;
-  target.classList.toggle('menu-open');
+  let panel = event.target;
+
+  if (panel.style.maxHeight){
+    panel.style.maxHeight = null;
+  } else {
+    panel.style.maxHeight = panel.scrollHeight + "px";
+  } 
 
 });

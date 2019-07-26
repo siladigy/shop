@@ -211,17 +211,13 @@
   overflow: hidden;
   margin-bottom: 5px;
   max-height: 25px;
-  -webkit-transition: .5s all ease-out;
-  transition: .5s all ease-out;
+  -webkit-transition: max-height .5s;
+  transition: max-height .5s;
 }
 
 .links .menu li a {
   font-size: 14px;
   text-decoration: none;
-}
-
-.links .menu-open {
-  max-height: 300px;
 }
 
 .goods {
@@ -230,7 +226,7 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 2000px;
+  max-width: 2000px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
