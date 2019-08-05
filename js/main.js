@@ -14,7 +14,9 @@ let enter = document.querySelector('#enter'),
     img = document.querySelectorAll('.img'),
     pic = document.querySelectorAll('.pic'),
     menuWrap = document.querySelector('.main-menu'),
-    menuList = document.querySelectorAll('.menu');
+    menuList = document.querySelectorAll('.menu'),
+    form = document.querySelector('.login-form'),
+    labelForm = document.querySelectorAll('.form-label');
 
 
 enter.addEventListener('click', function(){
@@ -42,8 +44,40 @@ loginBg.addEventListener('click', function(e){
       item.innerHTML = "";
     });
     }
+});
+
+email.addEventListener('focus', () => {
+
+    labelForm[0].style.transition = "0.3s";
+    labelForm[0].style.bottom = "-2px";
+    labelForm[0].style.fontSize = "12px";
 
 });
+email.addEventListener('focusout', () => {
+
+  if(email.value.trim() == ""){
+    labelForm[0].style.bottom = "-30px";
+    labelForm[0].style.fontSize = "16px";
+  }
+
+});
+
+password.addEventListener('focus', () => {
+
+  labelForm[1].style.transition = "0.3s";
+  labelForm[1].style.bottom = "-2px";
+  labelForm[1].style.fontSize = "12px";
+
+});
+password.addEventListener('focusout', () => {
+
+if(password.value == ""){
+  labelForm[1].style.bottom = "-30px";
+  labelForm[1].style.fontSize = "16px";
+}
+
+});
+
 
 submit.addEventListener('click', function(){
   if(email.value == ''){

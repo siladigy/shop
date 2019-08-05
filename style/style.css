@@ -119,10 +119,20 @@
   height: 500px;
 }
 
+.login-form label {
+  position: relative;
+  bottom: -30px;
+  color: gray;
+  pointer-events: none;
+  padding: 10px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  font-size: 16px;
+}
+
 .login-form input {
   font-size: 16px;
   width: 100%;
-  font-family: sans-serif;
   padding: 10px;
   margin-bottom: 10px;
   border: none;
@@ -141,7 +151,6 @@
   border: none;
   outline: none;
   cursor: pointer;
-  font-family: sans-serif;
   width: 100%;
   border: 1px solid #e1bf92;
   background: transparent;
@@ -373,7 +382,7 @@
 .slider-buttons-prev {
   height: 100%;
   position: absolute;
-  z-index: 99;
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -389,7 +398,7 @@
   right: 0;
   height: 100%;
   position: absolute;
-  z-index: 99;
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
