@@ -218,6 +218,11 @@
 .links .menu li a {
   font-size: 14px;
   text-decoration: none;
+  color: black;
+}
+
+.links .menu li a:hover {
+  color: grey;
 }
 
 .goods {
@@ -241,7 +246,7 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 1000px;
+  width: 1100px;
   margin: 0 auto;
   margin-top: 50px;
   -webkit-box-pack: justify;
@@ -261,7 +266,6 @@
   top: -7px;
   width: 200px;
   height: 250px;
-  margin-left: 30px;
   margin-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -337,7 +341,7 @@
 
 .slider {
   margin: 0 auto;
-  width: 1000px;
+  width: 1100px;
   overflow: hidden;
   position: relative;
 }
@@ -350,7 +354,7 @@
 }
 
 .slider-block {
-  width: 1000px;
+  width: 1100px;
   height: 300px;
   -webkit-transition: .5s;
   transition: .5s;
@@ -360,7 +364,7 @@
 }
 
 .slider-block img {
-  width: 1000px;
+  width: 1100px;
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
