@@ -21,25 +21,6 @@
         overflow: hidden
         width: 500px
         height: 500px
-        & label
-            position: relative
-            bottom: -30px
-            color: gray
-            pointer-events: none
-            padding: 10px
-            transition: .5s
-            font-size: 14px
-        & input
-            font-size: 16px
-            width: 100%
-            padding: 10px 
-            margin-bottom: 10px 
-            border: none
-            border-bottom: 1px solid grey
-            outline: none
-            text-transform: lowercase
-            &:focus
-                border-bottom: 1px solid rgb(225,191,146)
         & button
             font-size: 16px
             padding: 10px
@@ -79,3 +60,35 @@
         cursor: pointer
 .form-register
     display: none
+
+.inputBox
+    position: relative
+
+.inputBox input 
+    width: 100%
+    padding: 10px 
+    font-size: 14px
+    color: grey
+    margin-bottom: 30px
+    border: none
+    border-bottom: 1px solid grey
+    outline: none
+    background: transparent
+
+
+.inputBox label 
+    position: absolute
+    top: 0
+    left: 0
+    padding: 10px 
+    font-size: 14px
+    color: grey
+    pointer-events: none
+    transition: .5s 
+
+
+.inputBox input:focus ~ label,
+.inputBox input:valid ~ label 
+    top: -20px
+    left: 0
+    font-size: 12px

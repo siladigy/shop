@@ -60,36 +60,43 @@ openLogin.addEventListener('click', () => {
   registerForm.style.display = "none";
 });
 
-email.addEventListener('focus', () => {
+// email.addEventListener('focus', () => {
 
-    labelForm[0].style.transition = "0.3s";
-    labelForm[0].style.bottom = "-2px";
-    labelForm[0].style.fontSize = "12px";
+//     labelForm[0].style.transition = "0.3s";
+//     labelForm[0].style.bottom = "-2px";
+//     labelForm[0].style.fontSize = "12px";
 
-});
-email.addEventListener('focusout', () => {
+// });
+// email.addEventListener('focusout', () => {
 
-  if(email.value.trim() == ""){
-    labelForm[0].style.bottom = "-30px";
-    labelForm[0].style.fontSize = "16px";
-  }
+//   if(email.value.trim() == ""){
+//     labelForm[0].style.bottom = "-30px";
+//     labelForm[0].style.fontSize = "16px";
+//   }
 
-});
+// });
 
-password.addEventListener('focus', () => {
+// password.addEventListener('focus', () => {
 
-  labelForm[1].style.transition = "0.3s";
-  labelForm[1].style.bottom = "-2px";
-  labelForm[1].style.fontSize = "12px";
+//   labelForm[1].style.transition = "0.3s";
+//   labelForm[1].style.bottom = "-2px";
+//   labelForm[1].style.fontSize = "12px";
 
-});
-password.addEventListener('focusout', () => {
+// });
+// password.addEventListener('focusout', () => {
 
-if(password.value == ""){
-  labelForm[1].style.bottom = "-30px";
-  labelForm[1].style.fontSize = "16px";
-}
+// if(password.value == ""){
+//   labelForm[1].style.bottom = "-30px";
+//   labelForm[1].style.fontSize = "16px";
+// }
 
+// });
+
+login.addEventListener('focus', (event) => {
+ let target = event.target;
+ if(target.matches('input')){
+   target.style.background = "red";
+ }
 });
 
 // validate form
