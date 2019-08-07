@@ -26,7 +26,7 @@
     <div class="login login-hide">
             <div class="login-bg">
                 <div class="login-form">
-                    <form action="">
+                    <form action="" class="form-login">
                         <label for="email" class="form-label">Введите e-mail</label>
                         <input type="text" id='email'><br>
                         <span class='error'></span><br>
@@ -34,9 +34,29 @@
                         <input type="password" id='password'><br>
                         <span class='error'></span><br>
                         <a href="#">Забыли пароль?</a><br>
-                        <a href="#" class='register'>Зарегистрироваться</a>
+                        <a href="#" class='open-register'>Зарегистрироваться</a>
                         <button type="submit" id='submit'>Войти</button>
+                        <div class="facebook">
+                            <img src="images/facebook.svg" alt="">
+                        </div>
                     </form>
+                    <form action="" class="form-register">
+                            <label for="login" class="form-label">Введите логин</label>
+                            <input type="text" id='login'><br>
+                            <label for="email" class="form-label">Введите e-mail</label>
+                            <input type="text" id='email'><br>
+                            <span class='error'></span><br>
+                            <label for="password" class="form-label">Введите пароль</label>
+                            <input type="password" id='password'><br>
+                            <label for="password-repeat" class="form-label">Введите пароль еще раз</label>
+                            <input type="password" id='password-rapeat'><br>
+                            <span class='error'></span><br>
+                            <a href="#" class='open-login'>Уже есть аккаунт?</a>
+                            <button type="submit" id='submit'>Зарегистрироваться</button>
+                            <div class="facebook">
+                                <img src="images/facebook.svg" alt="">
+                            </div>
+                        </form>
                 </div>
             </div>
         </div>
@@ -94,12 +114,6 @@
         <div class="goods">
 
                 <div class="slider">
-                        <div class="slider-buttons-prev">
-                            <button class="prev slider-btn"><</button>
-                        </div>
-                        <div class="slider-buttons-next">
-                            <button class="next slider-btn">></button>
-                        </div>
                     <div class="slider-wrap">
                         <div class="slider-block">
                             <img src="images/1.jpg" alt="">
@@ -192,6 +206,7 @@
                 </div>
 
         </div>
+
 
 
 

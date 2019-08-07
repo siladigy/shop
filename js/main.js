@@ -16,7 +16,11 @@ let enter = document.querySelector('#enter'),
     menuWrap = document.querySelector('.main-menu'),
     menuList = document.querySelectorAll('.menu'),
     form = document.querySelector('.login-form'),
-    labelForm = document.querySelectorAll('.form-label');
+    labelForm = document.querySelectorAll('.form-label'),
+    openLogin = document.querySelector('.open-login'),
+    openRegister = document.querySelector('.open-register'),
+    loginForm = document.querySelector('.form-login'),
+    registerForm = document.querySelector('.form-register');
 
 
 enter.addEventListener('click', function(){
@@ -33,8 +37,8 @@ searchLine.addEventListener('focusout', () => {
   searchLine.style.color = 'rgba(0, 0, 0, 0)';
 });
 
-loginBg.addEventListener('click', function(e){
-    if(e.target == this){
+loginBg.addEventListener('mousedown', function(e){
+    if(e.target.classList.contains('login-bg')){
     login.classList.add('login-hide');
     password.value = '';
     password.style.borderBottom = '1px solid grey';
@@ -44,6 +48,16 @@ loginBg.addEventListener('click', function(e){
       item.innerHTML = "";
     });
     }
+});
+
+openRegister.addEventListener('click', () => {
+  loginForm.style.display = "none";
+  registerForm.style.display = "block";
+});
+
+openLogin.addEventListener('click', () => {
+  loginForm.style.display = "block";
+  registerForm.style.display = "none";
 });
 
 email.addEventListener('focus', () => {
@@ -78,10 +92,10 @@ if(password.value == ""){
 
 });
 
-
-submit.addEventListener('click', function(){
+// validate form
+submit.addEventListener('click', () => {
   if(email.value == ''){
-    error[0].innerHTML = "e-mail не может быть пустым";
+    error[0].innerHTML = "введите e-mail";
     email.style.borderBottom = '1px solid red'; 
   } else if (!email.value.includes('@') || !email.value.includes('.') || email.value.length < 5){
     error[0].innerHTML = "неправильный формат e-mail";
@@ -93,9 +107,9 @@ submit.addEventListener('click', function(){
 
 });
 
-submit.addEventListener('click', function(){
+submit.addEventListener('click', () => {
   if(password.value == ''){
-    error[1].innerHTML = "пароль не может быть пустым";
+    error[1].innerHTML = "введите пароль";
     password.style.borderBottom = '1px solid red'; 
   } else if(password.value.length < 6){
     error[1].innerHTML = "пароль должен содерать больше 6 символов";
@@ -106,32 +120,26 @@ submit.addEventListener('click', function(){
   }
 });
 
-// switcher.addEventListener('click', () => {
 
-//   block.forEach((elem) => {
-//     elem.classList.toggle('block-small');
-//   });
 
-//   img.forEach((elem) => {
-//     elem.classList.toggle('img-small');
-//   });
+menuWrap.addEventListener('click', (event) => {
 
-//   pic.forEach((elem) => {
-//     elem.classList.toggle('pic-small');
-//   });
-// });
+  let target = event.target;
 
-menuWrap.addEventListener('click', function (event) {
-
-  let panel = event.target;
-
-  if (panel.style.maxHeight){
-    panel.style.maxHeight = null;
+  if (target.style.maxHeight){
+    target.style.maxHeight = null;
   } else {
-    panel.style.maxHeight = panel.scrollHeight + "px";
+    target.style.maxHeight = target.scrollHeight + "px";
   } 
 
+  if(target.matches('.menu')){
+    target.classList.toggle('active-menu');
+  }
+  
 });
+
+
+
 
 search.addEventListener('click', () => {
 
@@ -140,9 +148,19 @@ search.addEventListener('click', () => {
  for(let i=0; i<res.length; i++){
    console.log(res[i].toLowerCase());
  }
-
   
 });
+
+
+
+
+
+
+
+
+
+
+
 
 
 // slider
@@ -210,45 +228,6 @@ search.addEventListener('click', () => {
       clearInterval(interval);
     };
 
-    prev.addEventListener('click', () => {
-      if(counter <=0) return;
-      counter --;
-      slider.style.transition = ".5s";
-      slider.style.transform = "translateX(" + (-size * counter) + "px)";
-      for(let i=0; i<(slide.length-2); i++){
-        if(dot[i].id == counter){
-          dot.forEach((elem) => {
-            elem.classList.remove('slider-active');
-          });
-          dot[i].classList.add('slider-active');
-        } else if (counter == 0){
-          dot.forEach((elem) => {
-            elem.classList.remove('slider-active');
-          });
-          dot[3].classList.add('slider-active');
-        }
-      }
-    });
-
-    next.addEventListener('click', () => {
-      if(counter >= slide.length-1) return;
-      counter ++;
-      slider.style.transition = ".5s";
-      slider.style.transform = "translateX(" + (-size * counter) + "px)";
-      for(let i=0; i<(slide.length-2); i++){
-        if(dot[i].id == counter){
-          dot.forEach((elem) => {
-            elem.classList.remove('slider-active');
-          });
-          dot[i].classList.add('slider-active');
-        } else if (counter > slide.length-2){
-          dot.forEach((elem) => {
-            elem.classList.remove('slider-active');
-          });
-          dot[0].classList.add('slider-active');
-        }
-      }
-    });
 
 slider.addEventListener('transitionend', () => {
   if(counter === slide.length-1){
@@ -299,3 +278,5 @@ carousel.addEventListener('click', (event) => {
 
 startSlide();
     
+
+
